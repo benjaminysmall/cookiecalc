@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: cookiecalc_development
+
+test:
+  <<: *default
+  database: cookiecalc_test
+
+production:
+  <<: *default
+  database: cookiecalc_production
+  username: cookiecalc
+  password: <%= ENV["COOKIECALC_DATABASE_PASSWORD"] %>
