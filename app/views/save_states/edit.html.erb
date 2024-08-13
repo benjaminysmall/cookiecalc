@@ -1,0 +1,12 @@
+<% content_for :title, "Editing save state" %>
+
+<h1>Editing save state</h1>
+
+<%= render "form", save_state: @save_state %>
+
+<br>
+
+<div>
+  <%= link_to "Show this save state", @save_state %> |
+  <%= link_to "Back to save states", save_states_path %>
+</div>

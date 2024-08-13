@@ -1,0 +1,22 @@
+<%= form_with(model: save_state) do |form| %>
+  <% if save_state.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(save_state.errors.count, "error") %> prohibited this save_state from being saved:</h2>
+
+      <ul>
+        <% save_state.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :encoded_string, style: "display: block" %>
+    <%= form.text_field :encoded_string %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

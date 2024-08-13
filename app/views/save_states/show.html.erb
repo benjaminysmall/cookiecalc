@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @save_state %>
+
+<div>
+  <%= link_to "Edit this save state", edit_save_state_path(@save_state) %> |
+  <%= link_to "Back to save states", save_states_path %>
+
+  <%= button_to "Destroy this save state", @save_state, method: :delete %>
+</div>
