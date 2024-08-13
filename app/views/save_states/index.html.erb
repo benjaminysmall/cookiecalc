@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Save states" %>
+
+<h1>Save states</h1>
+
+<div id="save_states">
+  <% @save_states.each do |save_state| %>
+    <%= render save_state %>
+    <p>
+      <%= link_to "Show this save state", save_state %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New save state", new_save_state_path %>
